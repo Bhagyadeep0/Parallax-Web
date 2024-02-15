@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto+Condensed:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000042;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* styling navigation */
+nav {
+  display: flex;
+  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  z-index: 0;
+  cursor: pointer;
+  margin: 10px 80px;
+  padding: 10px 5px;
+}
+
+nav ul {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  margin: 10px 80px;
+  padding: 10px 5px;
+  z-index: 100;
+}
+nav ul li {
+  list-style: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: width 0.2s ease-in;
+  background-color: #fff;
+}
+
+nav ul li a:hover:after,
+nav ul li a:focus:after,
+nav ul li a:active:after {
+  width: 100%;
+}
+
+/* styling images */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #000042, transparent);
+  z-index: 1000;
+}
+.wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.wrapper h1 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  z-index: -6;
+  width: 100%;
+  margin-left: 1200px;
+}
+
+#moon,
+#moon-glow,
+#landscape-glow {
+  mix-blend-mode: screen;
+  z-index: -6;
+}
+
+#bg-land {
+  z-index: -8;
+}
+
+#fore-land,
+#mid-land {
+  z-index: -6;
+}
+#stars {
+  z-index: -10;
+}
+
+.content {
+  padding: 20px 30px;
+  color: #fff;
+
+  background: #000042;
+  min-height: min-content;
+}
+.content h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 5em;
+  text-decoration: underline;
+}
+.content p {
+  font-size: 3em;
+  text-align: justify;
+}
