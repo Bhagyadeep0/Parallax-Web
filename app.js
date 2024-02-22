@@ -7,10 +7,26 @@ let foreLand = document.getElementById("fore-land");
 let moonGlow = document.getElementById("moon-glow");
 let text = document.getElementById("text");
 
+
+let stopPosition = 600;
+
 window.addEventListener("scroll", () => {
+  let currentPosition = window.scrollY || window.pageYOffset;
+
   let scroll = window.scrollY;
   stars.style.left = scroll * 0.1 + "px";
-  moon.style.top = scroll * 1.2 + "px";
+  moon.style.top = scroll * 1.2 + "px"
+
+
+  if (currentPosition > stopPosition) {
+    // If so, hide the moon
+    moon.style.display = 'none';
+    moonGlow.style.display = 'none';
+  } else {
+    // Otherwise, make sure it's visible
+    moon.style.display = 'block';
+    moonGlow.style.display = 'block';
+  }
   moonGlow.style.top = scroll * 1.2 + "px";
   moonGlow.style.zIndex = "-8";
   bigLand.style.top = scroll * 0.5 + "px";

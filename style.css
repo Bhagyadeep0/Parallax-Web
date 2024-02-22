@@ -15,7 +15,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+body::-webkit-scrollbar{
+display: none;
+}
 /* styling navigation */
 nav {
   display: flex;
